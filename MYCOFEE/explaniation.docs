@@ -1,0 +1,25 @@
+1- انشاء البيئه الافتراضيه فى مجلد المشروع 
+        *** virtualenv venv
+2- تفعيل البيئه الافتراضيه 
+        *** Source venv/bin/activate
+3- تنزيل جانجو بالمشروع 
+        *** pip install django 
+4- انشاء المشروع 
+        *** django-admin startproject (projectname)
+5- تشغيل الخادم 
+        *** python3 manage.py runserver 
+
+IF SERVER STOPED    -----> sudo fuser -k 8000/tcp
+##########################################################################################3
+
+create app and identify this app in settings of project show 303 
+
+##############################################################################################
+
+python manage.py startapp orders
+
+##############################################################################################
+
+python manage.py collectstatic    Collect static     318  see last line in settings.py 
+##############################################################################################
+python manage.py migrate
