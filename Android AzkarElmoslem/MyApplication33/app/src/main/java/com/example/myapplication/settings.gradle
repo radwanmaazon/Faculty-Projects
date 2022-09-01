@@ -1,0 +1,4 @@
+package com.example.myapplication
+
+rootProject.name='AzkarElmoslem'
+include ':app'

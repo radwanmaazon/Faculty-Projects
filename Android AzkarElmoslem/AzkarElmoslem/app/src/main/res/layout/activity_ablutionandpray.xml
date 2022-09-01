@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".morning">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:srcCompat="@drawable/pray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/Bt_before_eating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:text="الذكر قبل الوضوء"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/Bt_after_eating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:text="الذكر بعد الفراغ من الوضوء"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/Bt_enter_mosq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:text="دعاء دخول المسجد"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/Bt_leave_mosq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:text="دعاء الخروج من المسجد"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.azkarelmoslem">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Azkarelmoslem">
+        <activity
+            android:name=".after_eating"
+            android:exported="false" />
+        <activity
+            android:name=".before_eating"
+            android:exported="false" />
+        <activity
+            android:name=".eating"
+            android:exported="false" />
+        <activity
+            android:name=".zekrimport"
+            android:exported="false" />
+        <activity
+            android:name=".contactus"
+            android:exported="false" />
+        <activity
+            android:name=".afterabulation3"
+            android:exported="false" />
+        <activity
+            android:name=".afterabulation2"
+            android:exported="false" />
+        <activity
+            android:name=".afterabulation1"
+            android:exported="false" />
+        <activity
+            android:name=".leave_mosq"
+            android:exported="false" />
+        <activity
+            android:name=".Enter_mosq"
+            android:exported="false" />
+        <activity
+            android:name=".afterabulation"
+            android:exported="false" />
+        <activity
+            android:name=".beforeabulation"
+            android:exported="false" />
+        <activity
+            android:name=".ablutionandpray"
+            android:exported="false" />
+        <activity
+            android:name=".movinginnight2"
+            android:exported="false" />
+        <activity
+            android:name=".movinginnight1"
+            android:exported="false" />
+        <activity
+            android:name=".Bt_walkup2"
+            android:exported="false" />
+        <activity
+            android:name=".Bt_walkup1"
+            android:exported="false" />
+        <activity
+            android:name=".morn_night4"
+            android:exported="false" />
+        <activity
+            android:name=".morn_night5"
+            android:exported="false" />
+        <activity
+            android:name=".morn_night3"
+            android:exported="false" />
+        <activity
+            android:name=".morn_night2"
+            android:exported="false" />
+        <activity
+            android:name=".morn_night"
+            android:exported="false" />
+        <activity
+            android:name=".noom2"
+            android:exported="false" />
+        <activity
+            android:name=".noom"
+            android:exported="false" />
+        <activity
+            android:name=".morning"
+            android:exported="false" />
+        <activity
+            android:name=".welcom"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

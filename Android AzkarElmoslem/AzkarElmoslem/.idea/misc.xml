@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_ablutionandpray.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_after_eating.xml" value="0.1716485507246377" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_afterabulation.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_afterabulation1.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_afterabulation2.xml" value="0.2359375" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_afterabulation3.xml" value="0.25" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_before_eating.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_beforeabulation.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_bt_movinginnight1.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_bt_movinginnight2.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_bt_walkup1.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_bt_walkup2.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_contactus.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_eating.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_eating_and_drinking.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_enter_mosq.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_leave_mosq.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_morn_night.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_morn_night2.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_morn_night3.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_morn_night4.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_morn_night5.xml" value="0.19610507246376813" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_morning.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_noom.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_noom2.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_welcom.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/layout/activity_zekrimport.xml" value="0.17119565217391305" />
+        <entry key="..\:/Projects/Android/AzkarElmoslem/app/src/main/res/menu/menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
