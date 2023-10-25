@@ -1,1 +1,150 @@
 
+---
+apiVersion: v1 
+kind: PersistentVolume
+metadata:
+  name: portainer-pv
+spec:
+  storageClassName: hostpath
+  accessModes: 
+  - ReadWriteOnce
+  capacity: 
+    storage: 11Gi
+  hostPath:
+    path: /data
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: full-permissions-sa  # Name of the ServiceAccount
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: full-permissions-cluster-role  # Name of the ClusterRole
+rules:
+- apiGroups: [""]
+  resources: ["*"]
+  verbs: ["*"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: full-permissions-cluster-role-binding  # Name of the ClusterRoleBinding
+subjects:
+- kind: ServiceAccount
+  name: portainer-sa-user-3d69bf19-5a27-442e-bcc0-b680ea9d3534-1 # Name of the ServiceAccount
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: full-permissions-cluster-role  # Name of the ClusterRole
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portainer-agent-headless
+spec:
+  clusterIP: None
+  selector:
+    app: portainer
+---
+# Source: portainer/templates/pvc.yaml
+kind: "PersistentVolumeClaim"
+apiVersion: "v1"
+metadata:
+  name: portainer-pvc
+  #namespace: portainer 
+spec:
+  storageClassName: hostpath
+  accessModes:
+    - "ReadWriteOnce"
+  resources:
+    requests:
+      storage: "10Gi"
+---
+# portainer-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portainer-deploy
+  labels:
+    app: portainer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portainer
+  template:
+    metadata:
+      labels:
+        app: portainer
+    spec:
+      # tolerations:
+      # - key: node-role.kubernetes.io/master
+      #   operator: Exists
+      #   effect: NoSchedule
+      containers:
+        - name: portainer
+          image: portainer/portainer-ce:latest
+          ports:
+            - name: http
+              containerPort: 9000
+              protocol: TCP
+            - name: https
+              containerPort: 9443
+              protocol: TCP              
+            - name: tcp-edge
+              containerPort: 8000
+              protocol: TCP
+          volumeMounts:
+          - name: portain-vol
+            mountPath: /data
+          # - name: vol-cm
+          #   mountPath: /home/${USER}/.kube/config 
+          env:
+            - name: ADMIN_USERNAME
+              value: your_admin_username
+            # - name: ADMIN_PASSWORD
+            #   value: your_admin_password
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "0.5"
+            requests:
+              memory: "256Mi"
+              cpu: "0.25"
+      serviceAccountName: full-permissions-sa
+      volumes:
+      - name: portain-vol
+        persistentVolumeClaim:
+          claimName: portainer-pvc
+      # - name: vol-cm
+      #   configMap:
+      #     name: kubecnfg
+---
+# portainer-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: portainer-service
+spec:
+  selector:
+    app: portainer
+  ports:
+    - port: 9000
+      targetPort: 9000
+      protocol: TCP
+      name: http
+      nodePort: 30777
+    - port: 9443
+      targetPort: 9443
+      protocol: TCP
+      name: https
+      nodePort: 30779      
+    - port: 30776
+      targetPort: 30776
+      protocol: TCP
+      name: edge
+      nodePort: 30776
+  type: NodePort
